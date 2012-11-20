@@ -132,4 +132,8 @@
     <!-- Status bar double-tap to sleep -->
     <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
 
+    <!-- Themes settings  -->
+    <string name="header_category_interface">INTERFACE</string>
+    <string name="themes_settings_title">Themes</string>
+    <string name="themes_settings_summary">Change themes with T-Mobiles theme engine</string> 
 </resources>
