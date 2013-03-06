@@ -638,6 +638,10 @@ public class Settings extends PreferenceActivity
                     //SuperSu is installed and embeddable, so remove SuperUser header 
                     target.remove(i);
                 }
+             } else if (id == R.id.superuser) {
+                if (!DevelopmentSettings.isRootForAppsEnabled()) {
+                    target.remove(i);
+                }
             }
 
             if (i < target.size() && target.get(i) == header
