@@ -552,4 +552,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_title">Hover</string>
     <string name="hover_state_title">Enable Hover</string>
     <string name="hover_summary">Enables and customize hover notifications</string>
+
+    <!--  Plug-in prompt -->
+    <string name="plug_in_prompt_settings_title">Plug-in prompt</string>
+
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when plugged/unplugged</string>
 </resources>
