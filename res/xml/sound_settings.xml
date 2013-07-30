@@ -109,4 +109,8 @@
         android:title="@string/dock_sounds_enable_title"
         android:defaultValue="false" />
 
+    <PreferenceScreen
+        android:key="volume_rocker_settings"
+        android:fragment="com.android.settings.simpleaosp.VolumeRocker"
+        android:title="@string/volume_rocker_category_title" />
 </PreferenceScreen>
