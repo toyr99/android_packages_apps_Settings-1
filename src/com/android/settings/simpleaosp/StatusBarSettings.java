@@ -52,9 +52,10 @@ OnPreferenceChangeListener {
         } catch (SettingNotFoundException e) {
         }
 
-        // don't show status bar brightnees control on tablet
+        // don't show status bar brightnees and quick settings pull down control on tablet
         if (Utils.isTablet(getActivity())) {
             getPreferenceScreen().removePreference(mStatusBarBrightnessControl);
+            getPreferenceScreen().removePreference(mQuickPulldown);
         }
     }
 
@@ -90,12 +91,7 @@ OnPreferenceChangeListener {
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, value ? 1 : 0);
             return true;
         }
-        return false;
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-    return super.onPreferenceTreeClick(preferenceScreen, preference);
+   	 return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override
