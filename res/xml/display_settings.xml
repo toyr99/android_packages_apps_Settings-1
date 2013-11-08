@@ -57,6 +57,11 @@
             android:key="double_tap_sleep_gesture"
             android:title="@string/status_bar_double_tap_to_sleep_title" />
 
+     <PreferenceScreen
+        android:key="status_bar"
+        android:fragment="com.android.settings.simpleaosp.StatusBar"
+        android:title="@string/status_bar_title" />
+
 	<PreferenceScreen
             android:fragment="com.android.settings.cyanogenmod.NavRing"
             android:key="navigation_ring_shortcuts"
