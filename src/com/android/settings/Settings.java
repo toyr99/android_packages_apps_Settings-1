@@ -512,6 +512,7 @@ public class Settings extends PreferenceActivity
                 WifiP2pSettings.class.getName().equals(fragmentName) ||
                 BluetoothSettings.class.getName().equals(fragmentName) ||
                 DreamSettings.class.getName().equals(fragmentName) ||
+                HomeSettings.class.getName().equals(fragmentName) ||
                 LocationSettings.class.getName().equals(fragmentName) ||
                 ToggleAccessibilityServicePreferenceFragment.class.getName().equals(fragmentName) ||
                 PrintSettingsFragment.class.getName().equals(fragmentName) ||
