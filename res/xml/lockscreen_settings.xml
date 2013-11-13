@@ -14,6 +14,11 @@
             android:key="notification_category"
             android:title="@string/notification_category"/>
 
+	<com.android.settings.simpleaosp.SystemSettingCheckBoxPreference
+            android:key="see_through"
+            android:title="@string/see_through_title"
+            android:summary="@string/see_through_summary" />
+
        <com.android.settings.simpleaosp.SystemSettingCheckBoxPreference
             android:key="notification_peek"
             android:title="@string/notification_peek_title"

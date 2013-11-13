@@ -46,9 +46,10 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 
     private static final String KEY_PEEK = "notification_peek";
     private static final String PEEK_APPLICATION = "com.jedga.peek";
+    private static final String KEY_SEE_THROUGH = "see_through";
 
     private SystemSettingCheckBoxPreference mNotificationPeek;
-
+    private SystemSettingCheckBoxPreference mSeeThrough;
     private PackageStatusReceiver mPackageStatusReceiver;
     private IntentFilter mIntentFilter;
 
@@ -74,6 +75,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
         addPreferencesFromResource(R.xml.lockscreen_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
 
+ 	// lockscreen see through
+        mSeeThrough = (SystemSettingCheckBoxPreference) findPreference(KEY_SEE_THROUGH);
+        if (mSeeThrough != null) {
+            mSeeThrough.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
+        }
+
 	if (mPackageStatusReceiver == null) {
             mPackageStatusReceiver = new PackageStatusReceiver();
         }
@@ -93,7 +101,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
 	boolean value;
-	if (preference == mNotificationPeek) {
+	if (preference == mSeeThrough) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_SEE_THROUGH,
+                    mSeeThrough.isChecked() ? 1 : 0);
+            return true;
+	} else if (preference == mNotificationPeek) {
             Settings.System.putInt(getContentResolver(), Settings.System.PEEK_STATE,
                     mNotificationPeek.isChecked() ? 1 : 0);
 	return true; 
