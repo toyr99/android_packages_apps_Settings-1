@@ -60,13 +60,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_BATTERY_LIGHT = "battery_light";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
-
+    // Double-tap to sleep
+    private static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+    
     private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
-
+    // Double-tap to sleep
+    private CheckBoxPreference mStatusBarDoubleTapSleepGesture;
     private final Configuration mCurConfig = new Configuration();
     
     private ListPreference mScreenTimeoutPreference;
@@ -87,6 +90,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         Resources res = getResources();
 
         addPreferencesFromResource(R.xml.display_settings);
+
+	    // Status bar double-tap to sleep
+            mStatusBarDoubleTapSleepGesture = (CheckBoxPreference) getPreferenceScreen().findPreference(DOUBLE_TAP_SLEEP_GESTURE);
+            mStatusBarDoubleTapSleepGesture.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0) == 1));
 
         mAccelerometer = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
@@ -329,7 +337,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLockForAccessibility(
                     getActivity(), !mAccelerometer.isChecked());
-        }
+        } else if (preference == mStatusBarDoubleTapSleepGesture) {
+		boolean value;
+            value = mStatusBarDoubleTapSleepGesture.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE, value ? 1: 0);
+            return true;
+	}
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
