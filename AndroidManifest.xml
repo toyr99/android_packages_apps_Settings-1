@@ -944,10 +944,11 @@
                 android:value="com.android.settings.NotificationStation" />
         </activity>
 
-        <!--
+
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
-                android:taskAffinity=""
+                android:taskAffinity="com.android.settings"
+                android:parentActivityName="Settings"
                 android:excludeFromRecents="true"
                 android:enabled="false">
             <intent-filter>
@@ -962,7 +963,6 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/application_settings" />
         </activity>
-        -->
 
         <activity android:name="Settings$LocationSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
