@@ -22,11 +22,14 @@ OnPreferenceChangeListener {
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     // Double-tap to sleep
     private static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+    // Notification Count
+    private static final String STATUSBAR_NOTIF_COUNT = "status_bar_notif_count";
 
     private ListPreference mQuickPulldown;
     private CheckBoxPreference mStatusBarBrightnessControl;
     // Double-tap to sleep
     private CheckBoxPreference mStatusBarDoubleTapSleepGesture;
+    private CheckBoxPreference mStatusBarNotifCount;
 
 
     @Override
@@ -34,6 +37,10 @@ OnPreferenceChangeListener {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.status_bar_settings);
+
+ 	    // Notification Count
+ 	    mStatusBarNotifCount = (CheckBoxPreference) findPreference(STATUSBAR_NOTIF_COUNT);
+            mStatusBarNotifCount.setOnPreferenceChangeListener(this);
 
  	    // Status bar double-tap to sleep
             mStatusBarDoubleTapSleepGesture = (CheckBoxPreference) getPreferenceScreen().findPreference(DOUBLE_TAP_SLEEP_GESTURE);
@@ -70,14 +77,17 @@ OnPreferenceChangeListener {
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mQuickPulldown) {
+	if (preference == mStatusBarNotifCount) {
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.STATUSBAR_NOTIF_COUNT,
+                    ((CheckBoxPreference)preference).isChecked() ? 0 : 1);
+            return true;
+        } else if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) objValue);
             int quickPulldownIndex = mQuickPulldown.findIndexOfValue((String) objValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.QS_QUICK_PULLDOWN, quickPulldownValue);
             mQuickPulldown.setSummary(mQuickPulldown.getEntries()[quickPulldownIndex]);
             return true;
-
         }
         return false;
     }
