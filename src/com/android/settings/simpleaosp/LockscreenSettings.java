@@ -30,6 +30,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.SeekBarPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
@@ -47,9 +48,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     private static final String KEY_PEEK = "notification_peek";
     private static final String PEEK_APPLICATION = "com.jedga.peek";
     private static final String KEY_SEE_THROUGH = "see_through";
+    private static final String KEY_BLUR_RADIUS = "blur_radius";
 
     private SystemSettingCheckBoxPreference mNotificationPeek;
     private SystemSettingCheckBoxPreference mSeeThrough;
+    private SeekBarPreference mBlurRadius;
     private PackageStatusReceiver mPackageStatusReceiver;
     private IntentFilter mIntentFilter;
 
@@ -82,6 +85,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
                     Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
         }
 
+	// lock screen blur radius
+        mBlurRadius = (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
+        mBlurRadius.setProgress(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
+        mBlurRadius.setOnPreferenceChangeListener(this);
+        mBlurRadius.setEnabled(mSeeThrough.isChecked() && mSeeThrough.isEnabled());
+
 	if (mPackageStatusReceiver == null) {
             mPackageStatusReceiver = new PackageStatusReceiver();
         }
@@ -95,7 +105,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 	mNotificationPeek = (SystemSettingCheckBoxPreference) findPreference(KEY_PEEK);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+	if (preference == mBlurRadius) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS,
+                    (Integer) objValue);
+            return true;
+	}
         return false;
     }
 
@@ -105,6 +121,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_SEE_THROUGH,
                     mSeeThrough.isChecked() ? 1 : 0);
+		mBlurRadius.setEnabled(mSeeThrough.isChecked() && mSeeThrough.isEnabled());
             return true;
 	} else if (preference == mNotificationPeek) {
             Settings.System.putInt(getContentResolver(), Settings.System.PEEK_STATE,
