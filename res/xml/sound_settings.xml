@@ -110,6 +110,11 @@
         android:defaultValue="false" />
 
     <PreferenceScreen
+        android:key="quiet_hours_settings"
+        android:fragment="com.android.settings.simpleaosp.QuietHours"
+        android:title="@string/quiet_hours_title" />
+
+    <PreferenceScreen
         android:key="volume_rocker_settings"
         android:fragment="com.android.settings.simpleaosp.VolumeRocker"
         android:title="@string/volume_rocker_category_title" />
