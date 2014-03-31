@@ -100,4 +100,8 @@
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
+
+    <!-- Voice+ -->
+    <string name="voice_plus_title">Voice+</string>
+    <string name="voice_plus_summary">Enable all apps to send SMS messages through Google Voice</string>
 </resources>
