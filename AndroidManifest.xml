@@ -1741,5 +1741,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+	<activity android:name="com.android.settings.cyanogenmod.LockscreenTargets" />
+        <activity android:name="com.android.settings.cyanogenmod.LockscreenInterface" />
     </application>
 </manifest>
