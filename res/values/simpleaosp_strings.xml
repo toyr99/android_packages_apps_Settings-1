@@ -408,4 +408,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
      <!-- Adding more interface -->
      <string name="interface_more_title">More\u2026</string>
      <string name="lockscreen_title">Lockscreen Settings</string>
+
+    <!--Notification category-->
+    <string name="notification_category">Notifications</string>
+
+    <!--Notification peek-->
+    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_summary">Show latest notification after picking up your device</string>
 </resources>

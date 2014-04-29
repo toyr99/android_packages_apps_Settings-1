@@ -8,5 +8,15 @@
         android:key="lockscreen_targets"
         android:summary="@string/lockscreen_target_summary"
         android:title="@string/lockscreen_target_title" />
+
+        <!-- Notifications -->
+        <PreferenceCategory
+            android:key="notification_category"
+            android:title="@string/notification_category"/>
+
+       <com.android.settings.simpleaosp.SystemSettingCheckBoxPreference
+            android:key="notification_peek"
+            android:title="@string/notification_peek_title"
+            android:summary="@string/notification_peek_summary" />
 </PreferenceScreen>
 

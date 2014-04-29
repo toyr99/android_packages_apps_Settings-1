@@ -18,6 +18,7 @@ package com.android.settings.simpleaosp;
 
 import android.content.ContentResolver;
 import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.CheckBoxPreference;
@@ -37,20 +38,31 @@ import com.android.settings.Utils;
 public class LockscreenSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
     private static final String TAG = "LockscreenSettings";
 
+    private static final String KEY_PEEK = "notification_peek";
+
+    private SystemSettingCheckBoxPreference mNotificationPeek;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.lockscreen_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+	mNotificationPeek = (SystemSettingCheckBoxPreference) findPreference(KEY_PEEK);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
     }
 
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {	
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+	boolean value;
+	if (preference == mNotificationPeek) {
+            Settings.System.putInt(getContentResolver(), Settings.System.PEEK_STATE,
+                    mNotificationPeek.isChecked() ? 1 : 0);
+	return true; 
+	}
 		return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
