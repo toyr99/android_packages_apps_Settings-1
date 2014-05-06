@@ -49,12 +49,14 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     private static final String PEEK_APPLICATION = "com.jedga.peek";
     private static final String KEY_SEE_THROUGH = "see_through";
     private static final String KEY_BLUR_RADIUS = "blur_radius";
+    private static final String KEY_PEEK_PICKUP_TIMEOUT = "peek_pickup_timeout";
 
     private SystemSettingCheckBoxPreference mNotificationPeek;
     private SystemSettingCheckBoxPreference mSeeThrough;
     private SeekBarPreference mBlurRadius;
     private PackageStatusReceiver mPackageStatusReceiver;
     private IntentFilter mIntentFilter;
+    private ListPreference mPeekPickupTimeout;
 
     private boolean isPeekAppInstalled() {
         return isPackageInstalled(PEEK_APPLICATION);
@@ -103,10 +105,24 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
         getActivity().registerReceiver(mPackageStatusReceiver, mIntentFilter);
 
 	mNotificationPeek = (SystemSettingCheckBoxPreference) findPreference(KEY_PEEK);
+
+	mPeekPickupTimeout = (ListPreference) prefSet.findPreference(KEY_PEEK_PICKUP_TIMEOUT);
+        int peekTimeout = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.PEEK_PICKUP_TIMEOUT, 0, UserHandle.USER_CURRENT);
+        mPeekPickupTimeout.setValue(String.valueOf(peekTimeout));
+        mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntry());
+        mPeekPickupTimeout.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-	if (preference == mBlurRadius) {
+    if (pref == mPeekPickupTimeout) {
+            int peekTimeout = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                Settings.System.PEEK_PICKUP_TIMEOUT,
+                    peekTimeout, UserHandle.USER_CURRENT);
+            updatePeekTimeoutOptions(objValue);
+            return true;
+	} else if (preference == mBlurRadius) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_BLUR_RADIUS,
                     (Integer) objValue);
@@ -152,6 +168,14 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     public void onPause() {
         super.onPause();
         getActivity().unregisterReceiver(mPackageStatusReceiver);
+    }
+
+	private void updatePeekTimeoutOptions(Object newValue) {
+        int index = mPeekPickupTimeout.findIndexOfValue((String) newValue);
+        int value = Integer.valueOf((String) newValue);
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.System.PEEK_PICKUP_TIMEOUT, value);
+        mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntries()[index]);
     }
 
      public class PackageStatusReceiver extends BroadcastReceiver {
