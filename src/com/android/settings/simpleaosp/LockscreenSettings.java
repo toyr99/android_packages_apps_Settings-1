@@ -108,7 +108,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 
 	mPeekPickupTimeout = (ListPreference) prefSet.findPreference(KEY_PEEK_PICKUP_TIMEOUT);
         int peekTimeout = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PEEK_PICKUP_TIMEOUT, 0, UserHandle.USER_CURRENT);
+	Settings.System.PEEK_PICKUP_TIMEOUT, 10000, UserHandle.USER_CURRENT);
         mPeekPickupTimeout.setValue(String.valueOf(peekTimeout));
         mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntry());
         mPeekPickupTimeout.setOnPreferenceChangeListener(this);
@@ -116,11 +116,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
     if (pref == mPeekPickupTimeout) {
+	    int index = mPeekPickupTimeout.findIndexOfValue((String) objValue);
             int peekTimeout = Integer.valueOf((String) objValue);
             Settings.System.putIntForUser(getContentResolver(),
                 Settings.System.PEEK_PICKUP_TIMEOUT,
                     peekTimeout, UserHandle.USER_CURRENT);
-            updatePeekTimeoutOptions(objValue);
+	    mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntries()[index]);
             return true;
 	} else if (preference == mBlurRadius) {
             Settings.System.putInt(getContentResolver(),
@@ -168,14 +169,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     public void onPause() {
         super.onPause();
         getActivity().unregisterReceiver(mPackageStatusReceiver);
-    }
-
-	private void updatePeekTimeoutOptions(Object newValue) {
-        int index = mPeekPickupTimeout.findIndexOfValue((String) newValue);
-        int value = Integer.valueOf((String) newValue);
-        Settings.Secure.putInt(getActivity().getContentResolver(),
-                Settings.System.PEEK_PICKUP_TIMEOUT, value);
-        mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntries()[index]);
     }
 
      public class PackageStatusReceiver extends BroadcastReceiver {
