@@ -23,6 +23,7 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -50,6 +51,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     private static final String KEY_SEE_THROUGH = "see_through";
     private static final String KEY_BLUR_RADIUS = "blur_radius";
     private static final String KEY_PEEK_PICKUP_TIMEOUT = "peek_pickup_timeout";
+    private static final String KEY_PEEK_WAKE_TIMEOUT = "peek_wake_timeout";
 
     private SystemSettingCheckBoxPreference mNotificationPeek;
     private SystemSettingCheckBoxPreference mSeeThrough;
@@ -57,6 +59,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     private PackageStatusReceiver mPackageStatusReceiver;
     private IntentFilter mIntentFilter;
     private ListPreference mPeekPickupTimeout;
+    private ListPreference mPeekWakeTimeout;
 
     private boolean isPeekAppInstalled() {
         return isPackageInstalled(PEEK_APPLICATION);
@@ -107,21 +110,36 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 	mNotificationPeek = (SystemSettingCheckBoxPreference) findPreference(KEY_PEEK);
 
 	mPeekPickupTimeout = (ListPreference) prefSet.findPreference(KEY_PEEK_PICKUP_TIMEOUT);
-        int peekTimeout = Settings.System.getIntForUser(getContentResolver(),
+        int peekPickupTimeout = Settings.System.getIntForUser(getContentResolver(),
 	Settings.System.PEEK_PICKUP_TIMEOUT, 10000, UserHandle.USER_CURRENT);
-        mPeekPickupTimeout.setValue(String.valueOf(peekTimeout));
+        mPeekPickupTimeout.setValue(String.valueOf(peekPickupTimeout));
         mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntry());
         mPeekPickupTimeout.setOnPreferenceChangeListener(this);
+
+	mPeekWakeTimeout = (ListPreference) prefSet.findPreference(KEY_PEEK_WAKE_TIMEOUT);
+        int peekWakeTimeout = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.PEEK_WAKE_TIMEOUT, 5000, UserHandle.USER_CURRENT);
+        mPeekWakeTimeout.setValue(String.valueOf(peekWakeTimeout));
+        mPeekWakeTimeout.setSummary(mPeekWakeTimeout.getEntry());
+        mPeekWakeTimeout.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-    if (pref == mPeekPickupTimeout) {
+    if (preference == mPeekPickupTimeout) {
 	    int index = mPeekPickupTimeout.findIndexOfValue((String) objValue);
-            int peekTimeout = Integer.valueOf((String) objValue);
+	    int peekPickupTimeout = Integer.valueOf((String) objValue);
             Settings.System.putIntForUser(getContentResolver(),
                 Settings.System.PEEK_PICKUP_TIMEOUT,
-                    peekTimeout, UserHandle.USER_CURRENT);
+ 		peekPickupTimeout, UserHandle.USER_CURRENT);
 	    mPeekPickupTimeout.setSummary(mPeekPickupTimeout.getEntries()[index]);
+            return true;
+	} else if (preference == mPeekWakeTimeout) {
+            int index = mPeekWakeTimeout.findIndexOfValue((String) objValue);
+            int peekWakeTimeout = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                Settings.System.PEEK_WAKE_TIMEOUT,
+                    peekWakeTimeout, UserHandle.USER_CURRENT);
+            mPeekWakeTimeout.setSummary(mPeekWakeTimeout.getEntries()[index]);
             return true;
 	} else if (preference == mBlurRadius) {
             Settings.System.putInt(getContentResolver(),
