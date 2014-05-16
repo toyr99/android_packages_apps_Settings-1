@@ -73,11 +73,6 @@
         android:fragment="com.android.settings.simpleaosp.NavigationBarSettings"
         android:title="@string/navigation_bar_title" />
 
-<PreferenceScreen
-        android:key="lock_background_settings"
-        android:fragment="com.android.settings.simpleaosp.LockscreenInterface"
-        android:title="@string/lockscreen_background_style_title" />
-
 	<PreferenceScreen
         android:key="volume_rocker_settings"
         android:fragment="com.android.settings.simpleaosp.VolumeRocker"
