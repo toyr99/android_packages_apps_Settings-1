@@ -16,6 +16,7 @@
 
 package com.android.settings;
 
+import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +31,7 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.android.internal.telephony.Phone;
@@ -144,6 +146,11 @@ public class IccLockSettings extends PreferenceActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        ActionBar mActionBar = getActionBar();
+        if (mActionBar != null) {
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         if (Utils.isMonkeyRunning()) {
             finish();
             return;
@@ -189,6 +196,15 @@ public class IccLockSettings extends PreferenceActivity
 
     private void updatePreferences() {
         mPinToggle.setChecked(mPhone.getIccCard().getIccLockEnabled());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
     }
 
     @Override
