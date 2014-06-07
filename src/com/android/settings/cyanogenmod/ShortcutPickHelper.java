@@ -40,7 +40,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import net.purespeedx.psxxtras.R;
+import com.android.settings.R;
 import com.android.settings.cyanogenmod.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
