@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.simpleosp;
+package com.android.settings.simpleaosp;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -37,8 +37,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import static com.android.internal.util.simpleosp.NavigationRingConstants.*;
-import com.android.internal.util.simpleosp.NavigationRingHelpers;
+import static com.android.internal.util.simpleaosp.NavigationRingConstants.*;
+import com.android.internal.util.simpleaosp.NavigationRingHelpers;
 import com.android.internal.widget.multiwaveview.GlowPadView;
 import com.android.internal.widget.multiwaveview.TargetDrawable;
 import com.android.settings.R;
@@ -123,8 +123,8 @@ public class NavRing extends Fragment implements
         if (NavigationRingHelpers.isAssistantAvailable(getActivity())) {
             mActions.addAction(ACTION_ASSIST, R.string.navring_action_google_now);
         }
-        if (NavigationRingHelpers.isTorchAvailable(getActivity())) {
-            mActions.addAction(ACTION_TORCH, R.string.navring_action_torch);
+        if (NavigationRingHelpers.isLightbulbAvailable(getActivity())) {
+           mActions.addAction(ACTION_LIGHTBULB, R.string.navring_action_lightbulb);
         }
 
         mActions.addAction(ACTION_SCREENSHOT, R.string.navring_action_take_screenshot);
