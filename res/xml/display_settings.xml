@@ -57,6 +57,11 @@
                 android:title="@string/wifi_display_settings_title"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
+	<PreferenceScreen
+        android:key="navigation_bar"
+        android:fragment="com.android.settings.simpleaosp.NavigationBarSettings"
+        android:title="@string/navigation_bar_title" />
+
         <PreferenceCategory
             android:key="lights_prefs"
             android:title="@string/lights_category_title">
