@@ -50,11 +50,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mActivity = getActivity();
-        mResolver = mActivity.getContentResolver();            
-        prefs = getPreferenceScreen();                         
+	addPreferencesFromResource(R.xml.lockscreen_interface_settings);                         
       
+    }
+
+	public boolean onPreferenceChange(Preference preference, Object newValue) {
+        return false;
     }
 
     @Override
