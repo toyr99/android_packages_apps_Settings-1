@@ -1575,10 +1575,6 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <activity android:name=".notificationlight.NotificationLightSettings" />
-
-        <activity android:name=".notificationlight.BatteryLightSettings" />
-
         <!-- CyanogenMod Theme Engine activity -->
         <activity android:name="Settings$ThemeSettingsActivity"
                   android:label="@string/themes_settings_title"

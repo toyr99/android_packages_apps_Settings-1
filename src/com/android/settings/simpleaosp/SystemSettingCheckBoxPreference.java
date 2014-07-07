@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cyanogenmod;
+package com.android.settings.simpleaosp;
 
 import android.content.Context;
 import android.preference.CheckBoxPreference;
@@ -65,3 +65,4 @@ public class SystemSettingCheckBoxPreference extends CheckBoxPreference {
         return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }
+

@@ -91,19 +91,22 @@
         android:title="@string/volume_rocker_category_title" />
 
         <PreferenceCategory
-            android:key="lights_prefs"
-            android:title="@string/lights_category_title">
+            android:key="category_light_options"
+            android:title="@string/display_category_light_options_title" >
 
-            <PreferenceScreen
+	<com.android.settings.simpleaosp.SystemSettingCheckBoxPreference
                 android:key="notification_pulse"
                 android:title="@string/notification_pulse_title"
-                android:fragment="com.android.settings.notificationlight.NotificationLightSettings" />
+        	android:persistent="false" />
+
+            <PreferenceScreen
+                android:key="notification_light"
+                android:title="@string/notification_light_title"
+                android:fragment="com.android.settings.simpleaosp.notificationlight.NotificationLightSettings" />
 
             <PreferenceScreen
                 android:key="battery_light"
                 android:title="@string/battery_light_title"
-                android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
-
+                android:fragment="com.android.settings.simpleaosp.notificationlight.BatteryLightSettings" />
         </PreferenceCategory>
-
 </PreferenceScreen>

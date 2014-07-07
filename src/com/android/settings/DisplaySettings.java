@@ -27,7 +27,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -43,6 +42,8 @@ import com.android.settings.DreamSettings;
 
 import java.util.ArrayList;
 
+import com.android.settings.simpleaosp.SystemSettingCheckBoxPreference;
+
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
     private static final String TAG = "DisplaySettings";
@@ -53,11 +54,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String KEY_FONT_SIZE = "font_size";
-    private static final String KEY_SCREEN_SAVER = "screensaver";
-
-    private static final String CATEGORY_LIGHTS = "lights_prefs";
+    private static final String KEY_LIGHT_OPTIONS = "category_light_options";
+    private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
+    private static final String KEY_SCREEN_SAVER = "screensaver";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
     // Double-tap to sleep
@@ -66,10 +67,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
 
-    private PreferenceScreen mNotificationPulse;
-    private PreferenceScreen mBatteryPulse;
     // Double-tap to sleep
     private CheckBoxPreference mStatusBarDoubleTapSleepGesture;
+
+    private SystemSettingCheckBoxPreference mNotificationPulse;
+
+    private PreferenceCategory mLightOptions;
+    private PreferenceScreen mNotificationLight;
+    private PreferenceScreen mBatteryPulse;
+
     private final Configuration mCurConfig = new Configuration();
     
     private ListPreference mScreenTimeoutPreference;
@@ -87,9 +93,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-        Resources res = getResources();
 
         addPreferencesFromResource(R.xml.display_settings);
+        PreferenceScreen prefSet = getPreferenceScreen();
 
 	    // Status bar double-tap to sleep
             mStatusBarDoubleTapSleepGesture = (CheckBoxPreference) getPreferenceScreen().findPreference(DOUBLE_TAP_SLEEP_GESTURE);
@@ -125,29 +131,36 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
 
-        boolean hasNotificationLed = res.getBoolean(
-                com.android.internal.R.bool.config_intrusiveNotificationLed);
-        boolean hasBatteryLed = res.getBoolean(
-                com.android.internal.R.bool.config_intrusiveBatteryLed);
-        PreferenceCategory lightPrefs = (PreferenceCategory) findPreference(CATEGORY_LIGHTS);
-
-        if (hasNotificationLed || hasBatteryLed) {
-            mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
-            mNotificationPulse = (PreferenceScreen) findPreference(KEY_NOTIFICATION_PULSE);
-
-            // Battery light is only for primary user
-            if (UserHandle.myUserId() != UserHandle.USER_OWNER || !hasBatteryLed) {
-                lightPrefs.removePreference(mBatteryPulse);
-                mBatteryPulse = null;
+        mLightOptions = (PreferenceCategory) prefSet.findPreference(KEY_LIGHT_OPTIONS);
+        mNotificationPulse = (SystemSettingCheckBoxPreference) findPreference(KEY_NOTIFICATION_PULSE);
+        mNotificationLight = (PreferenceScreen) findPreference(KEY_NOTIFICATION_LIGHT);
+        mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
+        if (mNotificationPulse != null && mNotificationLight != null && mBatteryPulse != null) {
+            if (getResources().getBoolean(
+                    com.android.internal.R.bool.config_intrusiveNotificationLed)) {
+                 if (getResources().getBoolean(
+                         com.android.internal.R.bool.config_multiColorNotificationLed)) {
+                     mLightOptions.removePreference(mNotificationPulse);
+                     updateLightPulseDescription();
+                 } else {
+                     mLightOptions.removePreference(mNotificationLight);
+                     try {
+                         mNotificationPulse.setChecked(Settings.System.getInt(resolver,
+                                 Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);
+                     } catch (SettingNotFoundException e) {
+                         e.printStackTrace();
+                     }
+                 }
             }
 
-            if (!hasNotificationLed) {
-                lightPrefs.removePreference(mNotificationPulse);
-                mNotificationPulse = null;
+            if (!getResources().getBoolean(
+                    com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+                mLightOptions.removePreference(mBatteryPulse);
+            } else {
+                updateBatteryPulseDescription();
             }
-        } else {
-            getPreferenceScreen().removePreference(lightPrefs);
-        }
+        }                   
+
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -256,6 +269,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mRotationPolicyListener);
 
         updateState();
+        updateLightPulseDescription();
+        updateBatteryPulseDescription();
     }
 
     @Override
@@ -284,36 +299,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         updateAccelerometerRotationCheckbox();
         readFontSizePreference(mFontSizePref);
         updateScreenSaverSummary();
-        updateLightPulseSummary();
-        updateBatteryPulseSummary();
     }
 
     private void updateScreenSaverSummary() {
         if (mScreenSaverPreference != null) {
             mScreenSaverPreference.setSummary(
                     DreamSettings.getSummaryTextWithDreamName(getActivity()));
-        }
-    }
-
-    private void updateLightPulseSummary() {
-        if (mNotificationPulse != null) {
-            if (Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.NOTIFICATION_LIGHT_PULSE, 0) == 1) {
-                mNotificationPulse.setSummary(R.string.notification_light_enabled);
-            } else {
-                mNotificationPulse.setSummary(R.string.notification_light_disabled);
-            }
-        }
-    }
-
-    private void updateBatteryPulseSummary() {
-        if (mBatteryPulse != null) {
-            if (Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.BATTERY_LIGHT_ENABLED, 1) == 1) {
-                mBatteryPulse.setSummary(R.string.notification_light_enabled);
-            } else {
-                mBatteryPulse.setSummary(R.string.notification_light_disabled);
-            }
         }
     }
 
@@ -332,6 +323,30 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
+    private void updateLightPulseDescription() {
+        if (mNotificationLight == null) {
+            return;
+        }
+        if (Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NOTIFICATION_LIGHT_PULSE, 0) == 1) {
+            mNotificationLight.setSummary(getString(R.string.enabled));
+        } else {
+            mNotificationLight.setSummary(getString(R.string.disabled));
+        }
+    }
+
+    private void updateBatteryPulseDescription() {
+        if (mBatteryPulse == null) {
+            return;
+        }
+        if (Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.BATTERY_LIGHT_ENABLED, 1) == 1) {
+            mBatteryPulse.setSummary(getString(R.string.enabled));
+        } else {
+            mBatteryPulse.setSummary(getString(R.string.disabled));
+        }
+     }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mAccelerometer) {
@@ -343,7 +358,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.DOUBLE_TAP_SLEEP_GESTURE, value ? 1: 0);
             return true;
-	}
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
