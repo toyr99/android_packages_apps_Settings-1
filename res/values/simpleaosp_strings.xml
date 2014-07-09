@@ -209,6 +209,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
     <string name="status_bar_clock_title">Clock and date style</string>
+    <string name="status_bar_clock_summary">Change Clock and Date Settings</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
@@ -302,4 +303,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_light_low_color_title">Battery low</string>
     <string name="battery_light_medium_color_title">Medium charge</string>
     <string name="battery_light_full_color_title">Fully charged</string>
+
+     <!-- Adding more interface -->
+     <string name="interface_more_title">More\u2026</string>
+     <string name="lockscreen_title">Lockscreen Settings</string>
 </resources>

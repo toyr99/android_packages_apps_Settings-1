@@ -61,14 +61,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_SAVER = "screensaver";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
-    // Double-tap to sleep
-    private static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
     
     private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
-
-    // Double-tap to sleep
-    private CheckBoxPreference mStatusBarDoubleTapSleepGesture;
 
     private SystemSettingCheckBoxPreference mNotificationPulse;
 
@@ -96,11 +91,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.display_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
-
-	    // Status bar double-tap to sleep
-            mStatusBarDoubleTapSleepGesture = (CheckBoxPreference) getPreferenceScreen().findPreference(DOUBLE_TAP_SLEEP_GESTURE);
-            mStatusBarDoubleTapSleepGesture.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0) == 1));
 
         mAccelerometer = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
@@ -352,12 +342,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLockForAccessibility(
                     getActivity(), !mAccelerometer.isChecked());
-        } else if (preference == mStatusBarDoubleTapSleepGesture) {
-		boolean value;
-            value = mStatusBarDoubleTapSleepGesture.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE, value ? 1: 0);
-            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
