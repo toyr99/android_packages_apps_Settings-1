@@ -135,20 +135,16 @@
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
     </header>
 
-    <!-- Theme -->
-    <header android:title="@string/header_category_interface" />
+    <!-- PERSONAL -->
+    <header android:id="@+id/personal_section"
+        android:title="@string/header_category_personal" />
 
-     <!-- Themes -->
+    <!-- Themes -->
     <header
         android:id="@+id/theme_settings"
         android:title="@string/themes_settings_title"
         android:breadCrumbTitle="@string/themes_settings_title"
-        android:fragment="com.android.settings.ThemeSettings"
-        android:icon="@drawable/prd_ic_themepacks" />
-
-    <!-- PERSONAL -->
-    <header android:id="@+id/personal_section"
-        android:title="@string/header_category_personal" />
+        android:fragment="com.android.settings.ThemeSettings" />
 
     <!-- Location -->
     <header
