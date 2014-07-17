@@ -168,7 +168,7 @@
 
     <!-- Volume rocker wake -->
     <string name="pref_volume_wake_title">Volume rocker wake</string>
-    <string name="pref_volume_wake_summary">Pressing the volume rocker will wake your Nexus</string>
+    <string name="pref_volume_wake_summary">Pressing the volume rocker will wake your device</string>
 
     <!-- Volume rocker music control -->
     <string name="volbtn_music_controls_title">Volume rocker music controls</string>
@@ -190,7 +190,6 @@
 
     <!-- Themes settings  -->
     <string name="themes_settings_title">Themes</string>
-    <string name="themes_settings_summary">Change themes with T-Mobiles theme engine</string>
     
     <!-- The following are entries under the themes menu -->
     <string name="themepacks_settings_title">Theme Packs</string>
@@ -302,7 +301,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
-    <!-- Status bar -->
+    <!-- Status bar title -->
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
 
@@ -341,7 +340,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
 
-    <!-- Status bar  -->
     <!-- Quick settings -->
     <string name="quick_pulldown_title">Quick Settings pulldown</string>
     <string name="quick_pulldown_off">Off</string>
