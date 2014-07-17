@@ -306,9 +306,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_style_title">Style</string>
 
     <!-- Status bar | Clock -->
-    <string name="status_bar_clock">Clock and date</string>
+    <string name="status_bar_clock">Clock &amp; date</string>
     <string name="status_bar_clock_title">Clock and date style</string>
-    <string name="status_bar_clock_summary">Change Clock and Date Settings</string>
+    <string name="status_bar_clock_summary">Change clock and date settings</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
@@ -404,7 +404,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
      <!-- Adding more interface -->
      <string name="interface_more_title">More\u2026</string>
-     <string name="lockscreen_title">Lockscreen settings</string>
+     <string name="lockscreen_title">Lockscreen</string>
 
     <!--Notification category-->
     <string name="notification_category">Notifications</string>
@@ -530,7 +530,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Hover settings -->
     <string name="hover_settings_title">Hover</string>
     <string name="hover_require_fullscreen_mode_title">Require Fullscreen-Mode</string>
-    <string name="hover_require_fullscreen_mode_summary">Only show up when StatusBar is hidden</string>
+    <string name="hover_require_fullscreen_mode_summary">Only show up when status bar is hidden</string>
     <string name="hover_exclude_low_priority_title">Exclude low priority</string>
     <string name="hover_exclude_low_priority_summary">Exclude notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
