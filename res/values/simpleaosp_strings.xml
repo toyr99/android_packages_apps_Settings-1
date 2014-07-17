@@ -404,7 +404,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
      <!-- Adding more interface -->
      <string name="interface_more_title">More\u2026</string>
-     <string name="lockscreen_title">Lockscreen</string>
+     <string name="lockscreen_title">Lock screen</string>
 
     <!--Notification category-->
     <string name="notification_category">Notifications</string>
