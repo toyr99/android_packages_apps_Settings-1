@@ -39,7 +39,6 @@
 
 	<PreferenceScreen
         android:id="@+id/hover_settings"
-        android:icon="@drawable/ic_settings_hover"
         android:fragment="com.android.settings.simpleaosp.HoverSettings"
         android:title="@string/hover_settings_title" />
 
