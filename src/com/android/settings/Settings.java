@@ -617,10 +617,7 @@ public class Settings extends PreferenceActivity
                 if (um.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
                     target.remove(i);
                 }
-            } else if (id == R.id.superuser) {
-                if (!DevelopmentSettings.isRootForAppsEnabled()) {
-                    target.remove(i);
-                }
+                
             } else if (id == R.id.supersu_settings) {
                 // Embedding into Settings is supported from SuperSU v1.85 and up
                 boolean supported = false;
@@ -640,6 +637,9 @@ public class Settings extends PreferenceActivity
                 }
                 if (supported) {
                     //SuperSu is installed and embeddable, so remove SuperUser header 
+                    target.remove(i);
+                }
+                if (!DevelopmentSettings.isRootForAppsEnabled()) {
                     target.remove(i);
                 }
             }
