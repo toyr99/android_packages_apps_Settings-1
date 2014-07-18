@@ -37,12 +37,11 @@
 	    android:summary="@string/status_bar_clock_summary"
             android:title="@string/status_bar_clock" />
 
-    <com.android.settings.simpleaosp.HoverPreference 
+	<PreferenceScreen
         android:id="@+id/hover_settings"
-        android:summary="@string/hover_summary"
+        android:icon="@drawable/ic_settings_hover"
         android:fragment="com.android.settings.simpleaosp.HoverSettings"
-        android:title="@string/hover_settings_title"
-	android:widgetLayout="@layout/listview_embedded_switchpreference"/>
+        android:title="@string/hover_settings_title" />
 
         <ListPreference
             android:entries="@array/quick_pulldown_entries"
