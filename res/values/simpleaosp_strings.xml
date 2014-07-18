@@ -142,7 +142,7 @@
     <string name="navigation_bar_title">Navigation bar</string>
 
     <!-- Navigation Bar Height -->
-    <string name="navigation_bar_height">Navigation bar height</string>
+    <string name="navigation_bar_height">Height</string>
     <string name="navigation_bar_height_48">48dp (default)</string>
     <string name="navigation_bar_height_44">44dp</string>
     <string name="navigation_bar_height_40">40dp</string>
@@ -341,7 +341,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
 
     <!-- Quick settings -->
-    <string name="quick_pulldown_title">Quick Settings pulldown</string>
+    <string name="quick_pulldown_title">Quick settings pulldown</string>
     <string name="quick_pulldown_off">Off</string>
     <string name="quick_pulldown_left">Left</string>
     <string name="quick_pulldown_right">Right</string>
