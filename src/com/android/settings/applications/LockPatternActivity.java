@@ -155,7 +155,7 @@ public class LockPatternActivity extends Activity {
     private void switchToAccount() {
         mPatternLockHeader.setText(getResources()
                 .getString(R.string.lockpattern_settings_reset_summary));
-        mItem.setIcon(R.drawable.ic_settings_lockscreen);
+        mItem.setIcon(R.drawable.ic_settings_security);
         mAccountView.setVisibility(View.VISIBLE);
         mLockPatternView.setVisibility(View.GONE);
     }
