@@ -109,14 +109,17 @@
         android:title="@string/dock_sounds_enable_title"
         android:defaultValue="false" />
 
+    <!-- Advanced sound settings -->
+    <PreferenceCategory
+            android:title="@string/advanced_title"/>
+    
     <PreferenceScreen
-        android:key="quiet_hours_settings"
-        android:fragment="com.android.settings.simpleaosp.QuietHours"
-        android:title="@string/quiet_hours_title" />
+            android:key="quiet_hours_settings"
+            android:fragment="com.android.settings.simpleaosp.QuietHours"
+            android:title="@string/quiet_hours_title" />
 
     <PreferenceScreen
-        android:key="volume_rocker_settings"
-        android:fragment="com.android.settings.simpleaosp.VolumeRocker"
-        android:title="@string/volume_rocker_category_title" />
+            android:key="volume_rocker_settings"
+            android:fragment="com.android.settings.simpleaosp.VolumeRocker"
+            android:title="@string/volume_rocker_category_title" />
 </PreferenceScreen>
-
