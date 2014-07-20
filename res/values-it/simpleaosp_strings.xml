@@ -119,7 +119,7 @@
      <string name="ok">Ok</string>
 
     <!-- Add application dialog box title -->
-    <string name="profile_choose_app">Choose app</string>
+    <string name="profile_choose_app">Scegli app</string>
 
     <!-- Profiles settings -->
     <string name="profiles_settings_title">Profiles</string>
@@ -138,11 +138,11 @@
     <string name="new_profile_name">\u003Cnew profile\u003E</string>
 
     <!-- Navigation bar -->
-    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_title">Barra di navigazione</string>
 
     <!-- Navigation bar height -->
-    <string name="navigation_bar_height">Height</string>
-    <string name="navigation_bar_height_48">48dp (default)</string>
+    <string name="navigation_bar_height">Altezza</string>
+    <string name="navigation_bar_height_48">48dp (predefinito)</string>
     <string name="navigation_bar_height_44">44dp</string>
     <string name="navigation_bar_height_40">40dp</string>
     <string name="navigation_bar_height_36">36dp</string>
@@ -150,14 +150,14 @@
     <string name="navigation_bar_height_28">28dp</string>
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
-    <string name="navigation_bar_height_0">0dp (hide)</string>
+    <string name="navigation_bar_height_0">0dp (nascondi)</string>
 
     <!-- Voice+ -->
     <string name="voice_plus_title">Voice+</string>
     <string name="voice_plus_summary">Enable all apps to send SMS messages through Google Voice</string>
 
    <!-- Volume rocker behaviours -->
-    <string name="volume_rocker_category_title">Volume rocker</string>
+    <string name="volume_rocker_category_title">Tasti volume</string>
     
      <!--- Volume key cursor control -->
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>
@@ -175,29 +175,29 @@
 
      <!--Battery Icon selection-->
      <string name="battery_status_icon_title">Status icon</string>
-     <string name="battery_bar">Battery bar</string>
-     <string name="battery_bar_percent">Battery bar &amp; percent</string>
-     <string name="battery_circle">Battery circle</string>
-     <string name="battery_circle_percent">Battery circle &amp; percent</string>
+     <string name="battery_bar">Barra</string>
+     <string name="battery_bar_percent">Barra &amp; percentuale</string>
+     <string name="battery_circle">Cerchio</string>
+     <string name="battery_circle_percent">Cerchio &amp; percentuale</string>
 
     <!-- kill app long press back -->
-    <string name="kill_app_longpress_back">Kill app back button</string>
-    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
+    <string name="kill_app_longpress_back">Forza chiusura app con il tasto indietro</string>
+    <string name="kill_app_longpress_back_summary">Forza chiusura app in primo piano con la pressione lunga del tasto indietro</string>
 
     <!-- Status bar double-tap to sleep -->
-    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_title">Doppio tocco per spegnere lo schermo</string>
 
     <!-- Themes settings  -->
-    <string name="themes_settings_title">Themes</string>
+    <string name="themes_settings_title">Temi</string>
     
     <!-- The following are entries under the themes menu -->
-    <string name="themepacks_settings_title">Theme Packs</string>
-    <string name="styles_settings_title">Styles</string>
-    <string name="icons_settings_title">Icons</string>
-    <string name="fonts_settings_title">Fonts</string>
-    <string name="lockscreen_wallpaper_settings_title">Lockscreen Wallpapers</string>
-    <string name="bootanim_settings_title">Boot Animations</string>
-    <string name="soundpack_settings_title">Sound Packs</string> 
+    <string name="themepacks_settings_title">Pacchetti tema</string>
+    <string name="styles_settings_title">Stile</string>
+    <string name="icons_settings_title">Icone</string>
+    <string name="fonts_settings_title">Font</string>
+    <string name="lockscreen_wallpaper_settings_title">Sfondo schermata di sblocco</string>
+    <string name="bootanim_settings_title">Animazione di avvio</string>
+    <string name="soundpack_settings_title">Suoni</string> 
 
     <!-- Lockscreen background -->
     <string name="lock_screen_title">Lock screen</string>
@@ -229,12 +229,12 @@
     <string name="auto_brightness_reset_confirmation">All brightness levels will be reset to their default settings.</string>
     <string name="auto_brightness_split_lux_format">Split position (between <xliff:g id="min">%1$d</xliff:g> and <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Light level options</string>
-    <string name="auto_brightness_menu_edit">Edit</string>
-    <string name="auto_brightness_menu_split">Split</string>
-    <string name="auto_brightness_menu_remove">Remove</string>
-    <string name="auto_brightness_preview">Preview</string>
+    <string name="auto_brightness_menu_edit">Modifica</string>
+    <string name="auto_brightness_menu_split">Dividi</string>
+    <string name="auto_brightness_menu_remove">Rimuovi</string>
+    <string name="auto_brightness_preview">Anteprima</string>
     <string name="auto_brightness_preview_dialog_title">Brightness curve preview</string>
-    <string name="auto_brightness_help_dialog_title">Help</string>
+    <string name="auto_brightness_help_dialog_title">Aiuto</string>
     <string name="auto_brightness_help_text"><b>How is brightness calculated?</b>
 \n\n
 The brightness curve is calculated by performing a <i>cubic spline interpolation</i>
@@ -259,93 +259,93 @@ desired screen brightness. Selecting \'Split\' allows you to to duplicate one li
 two in order to insert additional control points. \'Remove\' deletes the selected line.
     </string>
 
-    <string name="auto_brightness_sensitivity_title">Adjustment sensitivity</string>
-    <string name="auto_brightness_sensitivity_verylow">Very low</string>
-    <string name="auto_brightness_sensitivity_low">Low</string>
-    <string name="auto_brightness_sensitivity_medium">Medium</string>
-    <string name="auto_brightness_sensitivity_high">High</string>
-    <string name="auto_brightness_sensitivity_veryhigh">Very high</string>
+    <string name="auto_brightness_sensitivity_title">Regolazione sensibilità</string>
+    <string name="auto_brightness_sensitivity_verylow">Molto bassa</string>
+    <string name="auto_brightness_sensitivity_low">Bassa</string>
+    <string name="auto_brightness_sensitivity_medium">Media</string>
+    <string name="auto_brightness_sensitivity_high">Alta</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Molto alta</string>
 
      <!-- Smooth Progessbar -->
-    <string name="progressbar_title">Progress bar</string>
-    <string name="progressbar_mirror_title">Mirror Mode</string>
+    <string name="progressbar_title">Barra di progresso</string>
+    <string name="progressbar_mirror_title">Modalità a specchio</string>
     <string name="progressbar_reverse_title">Reversed</string>
-    <string name="progressbar_speed_title">Speed</string>
+    <string name="progressbar_speed_title">Velocità</string>
     <string name="progressbar_width_title">Stroke Width</string>
-    <string name="progressbar_length_title">Separator length</string>
-    <string name="progressbar_count_title">Sections Count</string>
-    <string name="progressbar_color_1_title">Color1</string>
-    <string name="progressbar_color_2_title">Color2</string>
-    <string name="progressbar_color_3_title">Color3</string>
-    <string name="progressbar_color_4_title">Color4</string>
+    <string name="progressbar_length_title">Lunghezza separatore</string>
+    <string name="progressbar_count_title">Numero sezioni</string>
+    <string name="progressbar_color_1_title">Colore 1</string>
+    <string name="progressbar_color_2_title">Colore 2</string>
+    <string name="progressbar_color_3_title">Colore 3</string>
+    <string name="progressbar_color_4_title">Colore 4</string>
     <string name="sample_progressbar_text">ProgressBar : Preview</string>
-    <string name="progressbar_interpolator">Interpolator</string>
-    <string name="progressbar_none">None</string>
-    <string name="progressbar_acclerate">Accelerate</string>
-    <string name="progressbar_linear">Linear</string>
-    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
-    <string name="progressbar_decelerate">Decelerate</string>
-    <string name="progressbar_reset_message">Reset progress bar style to default?</string>
-    <string name="ram_bar_button_reset">Reset colors</string>
-    <string name="ram_bar_reset">Reset</string>
+    <string name="progressbar_interpolator">Animazione</string>
+    <string name="progressbar_none">Nessuna</string>
+    <string name="progressbar_acclerate">Accelera</string>
+    <string name="progressbar_linear">Lineare</string>
+    <string name="progressbar_acceleratedecelerate">Accelera e Decelera</string>
+    <string name="progressbar_decelerate">Decelera</string>
+    <string name="progressbar_reset_message">Resetta stile della barra di progresso?</string>
+    <string name="ram_bar_button_reset">Resetta colori</string>
+    <string name="ram_bar_reset">Resetta</string>
 
     <!-- Color picker -->
-    <string name="dialog_color_picker">Color Picker</string>
+    <string name="dialog_color_picker">Selezione colore</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
-    <string name="set">Set</string>
-    <string name="color_default">Default</string>
+    <string name="set">Imposta</string>
+    <string name="color_default">Predefinito</string>
 
     <!-- Status bar title -->
-    <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_style_title">Style</string>
+    <string name="status_bar_title">Barra di stato</string>
+    <string name="status_bar_style_title">Stile</string>
 
     <!-- Status bar Clock -->
-    <string name="status_bar_clock">Clock &amp; date</string>
-    <string name="status_bar_clock_title">Clock and date style</string>
-    <string name="status_bar_clock_summary">Change clock and date settings</string>
+    <string name="status_bar_clock">Orologio &amp; data</string>
+    <string name="status_bar_clock_title">Stile orologio e data</string>
+    <string name="status_bar_clock_summary">Impostazioni orologio e data</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
     <string name="clock_color_title">Color</string>
     <string name="status_bar_clock_style_reset">Reset color</string>
-    <string name="status_bar_show_clock_title">Show clock and date</string>
+    <string name="status_bar_show_clock_title">Mostra orologio e data</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
-    <string name="enable_clock_weekday">Day of the week</string>
+    <string name="enable_clock_weekday">Giorno della settimana</string>
     <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
-    <string name="right_clock">Right clock</string>
-    <string name="center_clock">Center clock</string>
-    <string name="dont_show">Don\'t show</string>
-    <string name="clock_date_display">Date</string>
+    <string name="right_clock">A destra</string>
+    <string name="center_clock">Al centro</string>
+    <string name="dont_show">Non mostrare</string>
+    <string name="clock_date_display">Data</string>
     <string name="clock_date_display_summary">Display custom date before the clock</string>
-    <string name="clock_date_style">Date style</string>
-    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_style">Stile data</string>
+    <string name="clock_date_format">Formato data</string>
     <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
-    <string name="clock_date_string_edittext_summary">Enter string</string>
-    <string name="am_pm_clock_normal">Normal font size</string>
-    <string name="am_pm_clock_small">Small font size</string>
-    <string name="am_pm_clock_none">Don\'t show</string>
-    <string name="clock_date_display_none">Don\'t show</string>
-    <string name="clock_date_display_small">Small font size</string>
-    <string name="clock_date_display_normal">Normal font size</string>
-    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_string_edittext_summary">Inserisci stringa</string>
+    <string name="am_pm_clock_normal">Normale</string>
+    <string name="am_pm_clock_small">Piccolo</string>
+    <string name="am_pm_clock_none">Non mostrare</string>
+    <string name="clock_date_display_none">Non mostrare</string>
+    <string name="clock_date_display_small">Piccolo</string>
+    <string name="clock_date_display_normal">Normale</string>
+    <string name="clock_date_style_normal">Normale</string>
     <string name="clock_date_style_lowercase">Lowercase</string>
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
 
     <!-- Quick settings -->
-    <string name="quick_pulldown_title">Quick settings pulldown</string>
-    <string name="quick_pulldown_off">Off</string>
-    <string name="quick_pulldown_left">Left</string>
-    <string name="quick_pulldown_right">Right</string>
+    <string name="quick_pulldown_title">Quick settings rapidi</string>
+    <string name="quick_pulldown_off">Spento</string>
+    <string name="quick_pulldown_left">Sinistra</string>
+    <string name="quick_pulldown_right">Destra</string>
 
     <!-- Status bar brightness control -->
-    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness">Controllo luminosità</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across status bar</string>
     <string name="status_bar_toggle_info">Automatic brightness must be disabled</string>
 
@@ -354,13 +354,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="safe_headset_volume_summary">Prevent loud volume levels when headset is first plugged in</string>
 
     <!-- Display settings screen, notification light settings -->
-    <string name="display_category_light_options_title">Lights</string>
-    <string name="notification_light_title">Notification light</string>
-    <string name="notification_light_general_title">General</string>
-    <string name="notification_light_applist_title">Applications</string>
-    <string name="notification_light_phonelist_title">Phone</string>
-    <string name="notification_light_use_custom">Use custom values</string>
-    <string name="enabled">Enabled</string>
+    <string name="display_category_light_options_title">Luci</string>
+    <string name="notification_light_title">Luce di notifica</string>
+    <string name="notification_light_general_title">Generale</string>
+    <string name="notification_light_applist_title">Applicazioni</string>
+    <string name="notification_light_phonelist_title">Telefono</string>
+    <string name="notification_light_use_custom">Usa valori personalizzati</string>
+    <string name="enabled">Abilitato</string>
     <string name="notification_light_default_value">Default</string>
     <string name="notification_light_missed_call_title">Missed call</string>
     <string name="notification_light_voicemail_title">Voicemail</string>
@@ -368,13 +368,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="notification_light_add">Add</string>
 
     <!-- Notification light dialogs -->
-    <string name="edit_light_settings">Edit light settings</string>
-    <string name="pulse_speed_title">Pulse length and speed</string>
+    <string name="edit_light_settings">Modifica impostazioni LED</string>
+    <string name="pulse_speed_title">Pulse Lunghezza e velocità</string>
     <string name="picker_arrow">→</string>
-    <string name="default_time">Normal</string>
-    <string name="custom_time">Custom</string>
-    <string name="dialog_test">Test</string>
-    <string name="dialog_delete_title">Delete</string>
+    <string name="default_time">Normale</string>
+    <string name="custom_time">Personalizzato</string>
+    <string name="dialog_test">Prova</string>
+    <string name="dialog_delete_title">Elimina</string>
     <string name="dialog_delete_message">Remove selected item?</string>
     <string name="dialog_test_message">Turn the screen off to see the selected notification in action or dismiss this dialog to stop the test</string>
     <string name="dialog_test_button">Dismiss</string>
@@ -404,32 +404,32 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="advanced_title">Advanced</string>
      
     <!-- Lockscreen interface -->
-    <string name="lockscreen_title">Lock screen</string>
+    <string name="lockscreen_title">Schermata di sblocco</string>
 
     <!--Notification category-->
-    <string name="notification_category">Notifications</string>
+    <string name="notification_category">Notifiche</string>
 
     <!--Notification peek-->
-    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_title">Notifiche peek</string>
     <string name="notification_peek_summary">Show latest notification after picking up your device</string>
     <string name="peek_pickup_timeout_title">Peek pickup timeout</string>
-    <string name="peek_pickup_10seconds">10 seconds (default)</string>
-    <string name="peek_pickup_30seconds">30 seconds</string>
-    <string name="peek_pickup_45seconds">45 seconds</string>
-    <string name="peek_pickup_60seconds">1 minute</string>
-    <string name="peek_pickup_120seconds">2 minutes</string>
+    <string name="peek_pickup_10seconds">10 secondi (predefinito)</string>
+    <string name="peek_pickup_30seconds">30 secondi</string>
+    <string name="peek_pickup_45seconds">45 secondi</string>
+    <string name="peek_pickup_60seconds">1 minuto</string>
+    <string name="peek_pickup_120seconds">2 minuti</string>
     <string name="peek_wake_timeout_title">Peek wake timeout</string>
-    <string name="peek_wake_3seconds">3 seconds</string>
-    <string name="peek_wake_5seconds">5 seconds (default)</string>
-    <string name="peek_wake_10seconds">10 seconds</string>
-    <string name="peek_wake_20seconds">20 seconds</string>
-    <string name="peek_wake_30seconds">30 seconds</string>
+    <string name="peek_wake_3seconds">3 secondi</string>
+    <string name="peek_wake_5seconds">5 secondi (predefinito)</string>
+    <string name="peek_wake_10seconds">10 secondi</string>
+    <string name="peek_wake_20seconds">20 secondi</string>
+    <string name="peek_wake_30seconds">30 secondi</string>
 
     <!--Blacklist-->
     <string name="blacklist_button_title">Blacklist</string>
-    <string name="peek_blacklist_label">Blacklist from Peek</string>
-    <string name="floating_blacklist_label">Blacklist from Floating Mode</string>
-    <string name="hover_blacklist_label">Blacklist from Hover</string>
+    <string name="peek_blacklist_label">Blacklist in Peek</string>
+    <string name="floating_blacklist_label">Blacklist in Floating Mode</string>
+    <string name="hover_blacklist_label">Blacklist in Hover</string>
 
     <!-- Whether to display the IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
@@ -459,17 +459,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
     <!--Lockscreen see through-->
-    <string name="see_through_title">See through</string>
-    <string name="see_through_summary">Shows the content behind your lock screen, your data may be visible to those around you</string>
-    <string name="blur_radius_title">Blur radius</string>
-    <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
+    <string name="see_through_title">Guarda attraverso</string>
+    <string name="see_through_summary">Mostra contenuti dietro la schermata di sblocco, i dati possono essere visti da chi è intorno a te</string>
+    <string name="blur_radius_title">Sfocatura</string>
+    <string name="blur_radius_summary">Seleziona intensità sfocatura per la schermata di sblocco</string>
 
     <!-- Basic numbers -->
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
+    <string name="two">Due</string>
+    <string name="three">Tre</string>
+    <string name="four">Quattro</string>
+    <string name="five">Cinque</string>
+    <string name="six">Sei</string>
 
     <!-- Quiet hours -->
     <string name="quiet_hours_title">Quiet hours</string>
@@ -546,12 +546,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_non_clearable_summary">Exclude not dismissable notifications</string>
 
     <!-- Hover long fade out delay -->
-    <string name="hover_long_fadeout_title">Hover notification time</string>
-    <string name="hover_long_fadeout_3seconds">3 seconds</string>
-    <string name="hover_long_fadeout_5seconds">5 seconds (default)</string>
-    <string name="hover_long_fadeout_7seconds">7 seconds</string>
-    <string name="hover_long_fadeout_10seconds">10 seconds</string>
-    <string name="hover_long_fadeout_15seconds">15 seconds</string>
+    <string name="hover_long_fadeout_title">Timeout Hover</string>
+    <string name="hover_long_fadeout_3seconds">3 secondi</string>
+    <string name="hover_long_fadeout_5seconds">5 secondi (predefinito)</string>
+    <string name="hover_long_fadeout_7seconds">7 secondi</string>
+    <string name="hover_long_fadeout_10seconds">10 secondi</string>
+    <string name="hover_long_fadeout_15seconds">15 secondi</string>
 
     <!-- Hover exclude topmost app -->
     <string name="hover_exclude_topmost_title">Exclude topmost app</string>
@@ -576,18 +576,18 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Setting checkbox title for root access -->
     <string name="root_access">Accesso Root</string>
-    <string name="root_access_warning_title">Allow root access?</string>
-    <string name="root_access_warning_message">Allowing applications to request root access is very dangerous and could compromise the security of your system!</string>
-    <string name="root_access_none">Disabled</string>
-    <string name="root_access_apps">Apps only</string>
-    <string name="root_access_adb">ADB only</string>
-    <string name="root_access_all">Apps and ADB</string>
+    <string name="root_access_warning_title">Consenti accesso root?</string>
+    <string name="root_access_warning_message">Consentire l'accesso root alle app è molto pericoloso e può compromettere la sicurezza del sistema!</string>
+    <string name="root_access_none">Disabilitato</string>
+    <string name="root_access_apps">Solo app</string>
+    <string name="root_access_adb">Solo ADB</string>
+    <string name="root_access_all">App e ADB</string>
 
     <!-- Quickboot -->
     <!-- Title of checkbox setting that enable quickboot. [CHAR LIMIT=32] -->
-    <string name="enable_quickboot_title">Enable QuickBoot mode</string>
+    <string name="enable_quickboot_title">Abilita QuickBoot</string>
     <!-- Summary of checkbox setting that enable quickboot. [CHAR LIMIT=64] -->
-    <string name="enable_quickboot_summary">Put device into QuickBoot mode instead of normal power off.</string>
+    <string name="enable_quickboot_summary">Esegui modalità QuickBoot invece del normale spegnimento.</string>
 
     <!--AppOps-->
     <string name="appops_settings_title">App ops</string>
