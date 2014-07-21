@@ -247,7 +247,8 @@ l\'anteprima mostra la curva in scala <i>logaritmica</i>, in modo che i punti di
 possano essere visualizzati distintamente. Se si usasse una scala lineare, non sarebbe
 possibile distinguere i punti di controllo - tendenzialmente più importanti - nella gamma
 più bassa di luminosità ambientale.\n\n
-<b>Come modificare la curva di luminosità?</b>\n\n
+<b>Come modificare la curva di luminosità?</b>
+\n\n
 Ogni riga nella lista corrisponde ad un <i>punto di controllo</i> della curva di luminosità.
 Per modificare il livello di luminosità del punto, puoi usare il controllo a scorrimento
 presente in ciascuna riga. La luminosità dello schermo sarà variata in accordo con il valore
