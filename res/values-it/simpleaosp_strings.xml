@@ -1,141 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- About phone screen, build date of ROM -->
-    <string name="build_date">SimpleAOSP build date</string>
+    <string name="build_date">Data build SimpleAOSP</string>
     <string name="build_date_default">2012-01-01-0000</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
 
     <!-- Navigation bar settings -->
-    <string name="navigation_bar">Navigation Bar</string>
-    <string name="navigation_ring_title">Quick launch shortcuts</string>
+    <string name="navigation_bar">Barra di navigazione</string>
+    <string name="navigation_ring_title">Scorciatoie di avvio rapido</string>
     
     <!-- Navigation ring shortcuts -->
-    <string name="navring_target_reset_message">Delete all user created navigation bar shortcuts and restore to default?</string>
-    <string name="navring_target_reset">Navigation bar shortcuts reset to default</string>
-    <string name="navring_target_save">Navigation bar shortcuts saved</string>
-    <string name="navring_action_open_ime_switcher">Open IME Switcher</string>
-    <string name="navring_action_kill_app">Kill app</string>
-    <string name="navring_action_none">None</string>
-    <string name="navring_action_take_screenshot">Take screenshot</string>
-    <string name="navring_action_ring_vibrate">Ring/Vibration</string>
-    <string name="navring_action_ring_silent">Ring/Silent</string>
-    <string name="navring_action_ring_vibrate_silent">Ring/Vibration/Silent</string>
-    <string name="navring_action_screen_off">Screen off</string>
-    <string name="navring_action_lightbulb">Toggle Lightbulb</string>
+    <string name="navring_target_reset_message">Eliminare le impostazioni correnti e ripristinare le predefinite?</string>
+    <string name="navring_target_reset">Avvio rapido ripristinato</string>
+    <string name="navring_target_save">Collegamenti della barra di navigazione salvati</string>
+    <string name="navring_action_open_ime_switcher">Apri selettore metodo di immissione</string>
+    <string name="navring_action_kill_app">Termina applicazione</string>
+    <string name="navring_action_none">Nessuna</string>
+    <string name="navring_action_take_screenshot">Cattura schermata</string>
+    <string name="navring_action_ring_vibrate">Suoneria/Vibrazione</string>
+    <string name="navring_action_ring_silent">Suoneria/Silenzioso</string>
+    <string name="navring_action_ring_vibrate_silent">Suoneria/Vibrazione/Silenzioso</string>
+    <string name="navring_action_screen_off">Spegni schermo</string>
+    <string name="navring_action_lightbulb">Torcia</string>
     <string name="navring_action_google_now">Google Now</string>
-    <string name="navring_choose_action_title">Choose action</string>
+    <string name="navring_choose_action_title">Scegli azione</string>
 
     <!-- Description of the unlock target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
-    <string name="description_target_unlock">Unlock</string>
+    <string name="description_target_unlock">Sblocca</string>
     <!-- Description of the unlock target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
-    <string name="description_target_search">Search</string>
+    <string name="description_target_search">Cerca</string>
     <!-- Description of the sound on target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
-    <string name="description_target_soundon">Sound on</string>
+    <string name="description_target_soundon">Suoni attivi</string>
     <!-- Description of the silent target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
-    <string name="description_target_silent">Silent</string>
+    <string name="description_target_silent">Silenzioso</string>
     <!-- Description of the camera target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
-    <string name="description_target_camera">Camera</string>
+    <string name="description_target_camera">Fotocamera</string>
     <!-- Description of the up direction in which one can to slide the handle in the Slide unlock       screen. [CHAR LIMIT=NONE] -->
-    <string name="description_direction_up">Slide up for <xliff:g id="target_description"               example="Unlock">%s</xliff:g>.</string>
+    <string name="description_direction_up">Scorri su per <xliff:g id="target_description"               example="Unlock">%s</xliff:g>.</string>
     <!-- Description of the down direction in which one can to slide the handle in the Slide unlock     screen. [CHAR LIMIT=NONE] -->
-    <string name="description_direction_down">Slide down for <xliff:g id="target_description"           example="Unlock">%s</xliff:g>.</string>
+    <string name="description_direction_down">Scorri giu per <xliff:g id="target_description"           example="Unlock">%s</xliff:g>.</string>
     <!-- Description of the left direction in which one can to slide the handle in the Slide unlock     screen. [CHAR LIMIT=NONE] -->
-    <string name="description_direction_left">"Slide left for <xliff:g id="target_description"          example="Unlock">%s</xliff:g>.</string>
+    <string name="description_direction_left">"Scorri a sinistra per <xliff:g id="target_description"          example="Unlock">%s</xliff:g>.</string>
     <!-- Description of the right direction in which one can to slide the handle in the Slide unlock    screen. [CHAR LIMIT=NONE] -->
-    <string name="description_direction_right">Slide right for <xliff:g id="target_description"         example="Unlock">%s</xliff:g>.</string>
+    <string name="description_direction_right">Scorri a destra per <xliff:g id="target_description"         example="Unlock">%s</xliff:g>.</string>
 
     <!-- Reset Profiles -->
-    <string name="profile_reset_title">Reset</string>
-    <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
+    <string name="profile_reset_title">Ripristino</string>
+    <string name="profile_reset_message">Eliminare tutti i profili e i gruppi di app creati dall\'utente e riportarli ai valori predefiniti?</string>
 
     <!-- Title for application group setting screen -->
-    <string name="profile_applist_title">Apps</string>
+    <string name="profile_applist_title">App</string>
     <!-- UI debug setting: title for app picker dialog [CHAR LIMIT=50] -->
 
     <!-- String for IconPicker -->
-    <string name="icon_picker_title">Choose icon source</string>
-    <string name="icon_picker_system_icons_title">System icons</string>
-    <string name="icon_picker_gallery_title">Gallery</string>
-    <string name="icon_picker_pack_title">Icon pack</string>
+    <string name="icon_picker_title">Scegli icone</string>
+    <string name="icon_picker_system_icons_title">Icone di sistema</string>
+    <string name="icon_picker_gallery_title">Galleria</string>
+    <string name="icon_picker_pack_title">Pacchetto icone</string>
 
     <!-- Lock Screen shortcuts -->
-    <string name="lockscreen_target_info">Drag the slider to targets to assign shortcuts</string>
-    <string name="lockscreen_target_title">Slider shortcuts</string>
-    <string name="lockscreen_target_summary">View or change custom lock screen shortcuts</string>
-    <string name="lockscreen_target_reset">Lock screen shortcuts reset to default</string>
-    <string name="lockscreen_target_reset_title">Reset</string>
-    <string name="lockscreen_target_reset_message">Delete all user created lock screen shortcuts and restore to default?</string>
-    <string name="lockscreen_target_empty">Empty</string>
-    <string name="lockscreen_target_edit_title">Edit shortcut and icon</string>
-    <string name="lockscreen_target_edit_msg">Select or change the desired application or activity and the associated icon</string>
+    <string name="lockscreen_target_info">Trascina il cursore e imposta le scorciatoie</string>
+    <string name="lockscreen_target_title">Scorciatoie di sblocco</string>
+    <string name="lockscreen_target_summary">Visualizza o modifica le scorciatoie di sblocco dello schermo</string>
+    <string name="lockscreen_target_reset">Scorciatoie di sblocco ripristinate</string>
+    <string name="lockscreen_target_reset_title">Ripristino</string>
+    <string name="lockscreen_target_reset_message">Eliminare tutte le funzioni veloci e ripristinare quelle predefinite?</string>
+    <string name="lockscreen_target_empty">Vuoto</string>
+    <string name="lockscreen_target_edit_title">Modifica scorciatoia e icona</string>
+    <string name="lockscreen_target_edit_msg">Seleziona o cambia l\'applicazione desiderata oppure l\'activity e l\'icona associata</string>
 
     <!-- Lock screen shortcuts -->
-    <string name="picker_activities">Activities</string>
-    <string name="select_custom_app_title">Select custom app</string>
-    <string name="select_custom_activity_title">Select custom activity</string>
-    <string name="icon_picker_choose_icon_title">Choose icon</string>
-    <string name="icon_picker_alarm">Alarm</string>
+    <string name="picker_activities">Attività</string>
+    <string name="select_custom_app_title">Scegli applicazione</string>
+    <string name="select_custom_activity_title">Scegli attività</string>
+    <string name="icon_picker_choose_icon_title">Scegli icona</string>
+    <string name="icon_picker_alarm">Allarme</string>
     <string name="icon_picker_browser">Browser</string>
-    <string name="icon_picker_calendar">Calendar</string>
-    <string name="icon_picker_camera">Camera</string>
+    <string name="icon_picker_calendar">Calendario</string>
+    <string name="icon_picker_camera">Fotocamera</string>
     <string name="icon_picker_chrome">Chrome</string>
-    <string name="icon_picker_contacts">Contacts</string>
+    <string name="icon_picker_contacts">Contatti</string>
     <string name="icon_picker_email">Email</string>
     <string name="icon_picker_email2">Email Holo</string>
     <string name="icon_picker_facebook">Facebook</string>
-    <string name="icon_picker_gallery">Gallery</string>
-    <string name="icon_picker_google_small">Google (small)</string>
-    <string name="icon_picker_googleplus">Google Plus</string>
+    <string name="icon_picker_gallery">Galleria</string>
+    <string name="icon_picker_google_small">Google (piccolo)</string>
+    <string name="icon_picker_googleplus">Google+</string>
     <string name="icon_picker_googletalk">Hangouts</string>
     <string name="icon_picker_maps">Maps</string>
-    <string name="icon_picker_movie">Movie</string>
-    <string name="icon_picker_music">Music</string>
-    <string name="icon_picker_nav_normal">Navigation</string>
-    <string name="icon_picker_phone">Phone</string>
+    <string name="icon_picker_movie">Video</string>
+    <string name="icon_picker_music">Musica</string>
+    <string name="icon_picker_nav_normal">Navigazione</string>
+    <string name="icon_picker_phone">Telefono</string>
     <string name="icon_picker_podcast">Podcast</string>
-    <string name="icon_picker_rss">Rss</string>
-    <string name="icon_picker_search">Search</string>
-    <string name="icon_picker_sms">Messaging</string>
+    <string name="icon_picker_rss">RSS</string>
+    <string name="icon_picker_search">Ricerca</string>
+    <string name="icon_picker_sms">Messaggi</string>
     <string name="icon_picker_twitter">Twitter</string>
 
     <!-- Volume adjust sounds -->
-    <string name="volume_adjust_sounds_enable_summary">Play sound while adjusting the volume</string>
+    <string name="volume_adjust_sounds_enable_summary">Riproduci un suono durante la regolazione del volume con i tasti volume</string>
 
     <!-- Link volumes -->
-    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
-    <string name="volume_ring_only_description">Ringtone</string>
+    <string name="link_volume_ringtones">Collega volume suoneria e notifiche</string>
+    <string name="volume_ring_only_description">Suoneria</string>
 
     <!-- Generic strings -->
-    <string name="ok_string">Ok</string>
-    <string name="default_string">Default</string>
-    <string name="enabled_string">Enabled</string>
-    <string name="disabled_string">Disabled</string>
-    <string name="general_string">General</string>
-    <string name="reset_string">Reset</string>
-    <string name="reset">Reset</string>
-    <string name="empty_string">Empty</string>
-     <string name="ok">Ok</string>
+    <string name="ok_string">OK</string>
+    <string name="default_string">Predefinito</string>
+    <string name="enabled_string">Attivato</string>
+    <string name="disabled_string">Disattivato</string>
+    <string name="general_string">Generale</string>
+    <string name="reset_string">Ripristino</string>
+    <string name="reset">Ripristino</string>
+    <string name="empty_string">Vuoto</string>
+     <string name="ok">OK</string>
 
     <!-- Add application dialog box title -->
     <string name="profile_choose_app">Scegli app</string>
 
     <!-- Profiles settings -->
-    <string name="profiles_settings_title">Profiles</string>
-    <string name="profiles_general_title">General</string>
-    <string name="profiles_add">Add</string>
-    <string name="profile_menu_delete">Delete</string>
-    <string name="profile_settings_title">Profile</string>
-    <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
+    <string name="profiles_settings_title">Profili</string>
+    <string name="profiles_general_title">Generale</string>
+    <string name="profiles_add">Aggiungi</string>
+    <string name="profile_menu_delete">Elimina</string>
+    <string name="profile_settings_title">Profilo</string>
+    <string name="profile_empty_list_profiles_off">Per configurare e utilizzare i profili di sistema, attivare Profili.</string>
 
     <!-- Add Profile -->
-    <string name="add_profile_dialog_title">Create new profile</string>
-    <string name="profile_name_title">Name</string>
-    <string name="profile_profile_name_prompt">Enter a name for the new profile</string>
-    <string name="menu_new_profile">New profile</string>
-    <string name="menu_new_profile_summary">Add and configure a new profile</string>
-    <string name="new_profile_name">\u003Cnew profile\u003E</string>
+    <string name="add_profile_dialog_title">Crea nuovo profilo</string>
+    <string name="profile_name_title">Nome</string>
+    <string name="profile_profile_name_prompt">Inserisci un nome per il nuovo profilo</string>
+    <string name="menu_new_profile">Nuovo profilo</string>
+    <string name="menu_new_profile_summary">Aggiungi e configura un nuovo profilo</string>
+    <string name="new_profile_name">\u003Cnuovo profilo\u003E</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_title">Barra di navigazione</string>
@@ -154,109 +154,108 @@
 
     <!-- Voice+ -->
     <string name="voice_plus_title">Voice+</string>
-    <string name="voice_plus_summary">Enable all apps to send SMS messages through Google Voice</string>
+    <string name="voice_plus_summary">Consenti a tutte le app l\'invio di messaggi SMS con Google Voice</string>
 
    <!-- Volume rocker behaviours -->
     <string name="volume_rocker_category_title">Tasti volume</string>
     
      <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+    <string name="volume_key_cursor_control_title">Controlla cursore con i tasti volume</string>
+    <string name="volume_key_cursor_control_off">Disattivato</string>
+    <string name="volume_key_cursor_control_on">Volume su/giu muove il cursore a sinistra/destra</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume su/giu muove il cursore a destra/sinistra</string>
 
     <!-- Volume rocker wake -->
-    <string name="pref_volume_wake_title">Volume rocker wake</string>
-    <string name="pref_volume_wake_summary">Pressing the volume rocker will wake your device</string>
+    <string name="pref_volume_wake_title">Attivazione tramite tasti volume</string>
+    <string name="pref_volume_wake_summary">Premere i tasti del volume farà attivare il dispositivo</string>
 
     <!-- Volume rocker music control -->
-    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
-    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
+    <string name="volbtn_music_controls_title">Cambia traccia</string>
+    <string name="volbtn_music_controls_summary">Quando lo schermo è spento la pressione prolungata dei tasti volume cambia traccia</string>
 
      <!--Battery Icon selection-->
-     <string name="battery_status_icon_title">Status icon</string>
+     <string name="battery_status_icon_title">Icona batteria</string>
      <string name="battery_bar">Barra</string>
      <string name="battery_bar_percent">Barra &amp; percentuale</string>
      <string name="battery_circle">Cerchio</string>
      <string name="battery_circle_percent">Cerchio &amp; percentuale</string>
 
     <!-- kill app long press back -->
-    <string name="kill_app_longpress_back">Forza chiusura app con il tasto indietro</string>
-    <string name="kill_app_longpress_back_summary">Forza chiusura app in primo piano con la pressione lunga del tasto indietro</string>
+    <string name="kill_app_longpress_back">Termina app con tasto</string>
+    <string name="kill_app_longpress_back_summary">Termina l\'applicazione in primo piano tenendo premuto il tasto indietro</string>
 
     <!-- Status bar double-tap to sleep -->
-    <string name="status_bar_double_tap_to_sleep_title">Doppio tocco per spegnere lo schermo</string>
+    <string name="status_bar_double_tap_to_sleep_title">Doppio tocco per sospendere</string>
 
     <!-- Themes settings  -->
     <string name="themes_settings_title">Temi</string>
     
     <!-- The following are entries under the themes menu -->
     <string name="themepacks_settings_title">Pacchetti tema</string>
-    <string name="styles_settings_title">Stile</string>
+    <string name="styles_settings_title">Stili</string>
     <string name="icons_settings_title">Icone</string>
-    <string name="fonts_settings_title">Font</string>
-    <string name="lockscreen_wallpaper_settings_title">Sfondo schermata di sblocco</string>
-    <string name="bootanim_settings_title">Animazione di avvio</string>
-    <string name="soundpack_settings_title">Suoni</string> 
+    <string name="fonts_settings_title">Caratteri</string>
+    <string name="lockscreen_wallpaper_settings_title">Sfondi schermata sblocco</string>
+    <string name="bootanim_settings_title">Animazioni di avvio</string>
+    <string name="soundpack_settings_title">Pacchetti suoni</string> 
 
     <!-- Lockscreen background -->
-    <string name="lock_screen_title">Lock screen</string>
-    <string name="lockscreen_background">Background</string>
-    <string name="lockscreen_background_style_title">Lock screen background</string>
-    <string name="background_default">Default background</string>
-    <string name="background_wallpaper">Custom wallpaper</string>
-    <string name="background_result_successful">Background changed</string>
-    <string name="background_result_not_successful">Background not changed</string>
-    <string name="setting_lockscreen_background">Applying background</string>
+    <string name="lock_screen_title">Schermata di sblocco</string>
+    <string name="lockscreen_background">Sfondo</string>
+    <string name="lockscreen_background_style_title">Sfondo schermata sblocco</string>
+    <string name="background_default">Sfondo predefinito</string>
+    <string name="background_wallpaper">Wallpaper personalizzato</string>
+    <string name="background_result_successful">Sfondo modificato</string>
+    <string name="background_result_not_successful">Sfondo non modificato</string>
+    <string name="setting_lockscreen_background">Applicazione sfondo</string>
 
     <!-- Automatic brightness customization -->
-    <string name="auto_brightness_setup_title">Automatic brightness</string>
-    <string name="auto_brightness_adjustment_title">Brightness adjustment</string>
-    <string name="auto_brightness_twilight_adjustment">Adjust to sunrise and sunset</string>
-    <string name="light_sensor_current_value">Current light sensor value: <xliff:g id="light_level">%d</xliff:g> lux</string>
-    <string name="auto_brightness_dialog_title">Automatic brightness levels</string>
+    <string name="auto_brightness_setup_title">Luminosità automatica</string>
+    <string name="auto_brightness_adjustment_title">Regolazione luminosità</string>
+    <string name="auto_brightness_twilight_adjustment">Regolazione per alba e tramonto</string>
+    <string name="light_sensor_current_value">Valore attuale sensore luminosità: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Livelli automatici di luminosità</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
     <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
     <string name="auto_brightness_brightness_format" translatable="false"><xliff:g id="percent">%s</xliff:g>%%</string>
-    <string name="auto_brightness_adjust_button">Adjust</string>
-    <string name="auto_brightness_close_button">Close</string>
-    <string name="auto_brightness_reset_button">Reset</string>
-    <string name="auto_brightness_split_dialog_title">Split brightness level</string>
-    <string name="auto_brightness_level_dialog_title">Light level setup</string>
-    <string name="auto_brightness_lux">Ambient brightness (lux)</string>
-    <string name="auto_brightness_backlight">Screen brightness (%)</string>
-    <string name="auto_brightness_reset_dialog_title">Reset levels?</string>
-    <string name="auto_brightness_reset_confirmation">All brightness levels will be reset to their default settings.</string>
-    <string name="auto_brightness_split_lux_format">Split position (between <xliff:g id="min">%1$d</xliff:g> and <xliff:g id="max">%2$d</xliff:g> lux)</string>
-    <string name="auto_brightness_level_options">Light level options</string>
+    <string name="auto_brightness_adjust_button">Regola</string>
+    <string name="auto_brightness_close_button">Chiudi</string>
+    <string name="auto_brightness_reset_button">Ripristina</string>
+    <string name="auto_brightness_split_dialog_title">Dividi livelli luminosità</string>
+    <string name="auto_brightness_level_dialog_title">Impostazioni luminosità</string>
+    <string name="auto_brightness_lux">Luminosità ambientale (lux)</string>
+    <string name="auto_brightness_backlight">Luminosità schermo (%)</string>
+    <string name="auto_brightness_reset_dialog_title">Ripristina livelli?</string>
+    <string name="auto_brightness_reset_confirmation">Tutti i livelli di luminosità saranno riportati ai rispettivi valori predefiniti.</string>
+    <string name="auto_brightness_split_lux_format">Dividi posizione (tra <xliff:g id="min">%1$d</xliff:g> e <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_level_options">Impostazioni livelli luminosità</string>
     <string name="auto_brightness_menu_edit">Modifica</string>
     <string name="auto_brightness_menu_split">Dividi</string>
     <string name="auto_brightness_menu_remove">Rimuovi</string>
     <string name="auto_brightness_preview">Anteprima</string>
-    <string name="auto_brightness_preview_dialog_title">Brightness curve preview</string>
-    <string name="auto_brightness_help_dialog_title">Aiuto</string>
-    <string name="auto_brightness_help_text"><b>How is brightness calculated?</b>
+    <string name="auto_brightness_preview_dialog_title">Anteprima curva luminosità</string>
+    <string name="auto_brightness_help_dialog_title">Guida</string>
+    <string name="auto_brightness_help_text"><b>Come viene calcolata la luminosità?</b>
 \n\n
-The brightness curve is calculated by performing a <i>cubic spline interpolation</i>
-on a given number of <i>control points</i>. It\'s not a \'bucket-type\' calculation where
-screen brightness will stay constant for a specific range of ambient brightness. That way,
-small changes in ambient brightness do not cause a large jump in screen brightness; however,
-it can be a little hard to predict the exact consequences of changing control points.\n
-To help with that, a preview of the calculated curve can be examined. Please note that the
-preview shows the curve in <i>logarithmic</i> scale, so that all control points can be shown
-distinctively. When using a linear scale, it wouldn\'t be possible to distinguish the tendentially
-more important control points in the lower range of ambient brightness.
-\n\n
-<b>How to edit the brightness curve?</b>
-\n\n
-Each line in the brightness list corresponds to one <i>control point</i> of the
-brightness curve. To edit the brightness level of the point, you can use the slider
-present in each line. The screen brightness will be changed accordingly while touching
-the slider to give a preview of the light level.\n
-Additional options are available by long-pressing a line. By selecting \'Edit\', you can
-both edit the ambient brightness level of the control point as well as manually input the
-desired screen brightness. Selecting \'Split\' allows you to to duplicate one line into
-two in order to insert additional control points. \'Remove\' deletes the selected line.
+La curva di luminosità viene calcolata eseguendo una <i>interpolazione spline di terzo grado</i>
+su un dato numero di <i>punti di controllo</i>. Non è un algoritmo che fa rimanere costante
+la luminosità dello schermo in determinati intervalli di luminosità ambientale. In questo modo,
+piccole variazioni di luce ambientale non causano grandi variazioni di luminosità dello schermo;
+tuttavia, può essere arduo predire le esatte conseguenze di una modifica nei punti di controllo.\n
+Per rimediare a questo, si può esaminare un\'anteprima della curva calcolata. Si noti che
+l\'anteprima mostra la curva in scala <i>logaritmica</i>, in modo che i punti di controllo
+possano essere visualizzati distintamente. Se si usasse una scala lineare, non sarebbe
+possibile distinguere i punti di controllo - tendenzialmente più importanti - nella gamma
+più bassa di luminosità ambientale.\n\n
+<b>Come modificare la curva di luminosità?</b>\n\n
+Ogni riga nella lista corrisponde ad un <i>punto di controllo</i> della curva di luminosità.
+Per modificare il livello di luminosità del punto, puoi usare il controllo a scorrimento
+presente in ciascuna riga. La luminosità dello schermo sarà variata in accordo con il valore
+del controllo a scorrimento per fornire un\'anteprima del livello di luminosità.\n
+Altre opzioni sono disponibili premendo a lungo una riga. Selezionando \'Modifica\', puoi modificare
+il livello di luce ambientale del punto di controllo, ed anche inserire manualmente il valore
+desiderato di luminosità dello schermo. Selezionando \'Dividi\' puoi dividere una riga, per
+inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
     </string>
 
     <string name="auto_brightness_sensitivity_title">Regolazione sensibilità</string>
@@ -269,16 +268,16 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
      <!-- Smooth Progessbar -->
     <string name="progressbar_title">Barra di progresso</string>
     <string name="progressbar_mirror_title">Modalità a specchio</string>
-    <string name="progressbar_reverse_title">Reversed</string>
+    <string name="progressbar_reverse_title">Inverso</string>
     <string name="progressbar_speed_title">Velocità</string>
-    <string name="progressbar_width_title">Stroke Width</string>
+    <string name="progressbar_width_title">Larghezza tratto</string>
     <string name="progressbar_length_title">Lunghezza separatore</string>
     <string name="progressbar_count_title">Numero sezioni</string>
     <string name="progressbar_color_1_title">Colore 1</string>
     <string name="progressbar_color_2_title">Colore 2</string>
     <string name="progressbar_color_3_title">Colore 3</string>
     <string name="progressbar_color_4_title">Colore 4</string>
-    <string name="sample_progressbar_text">ProgressBar : Preview</string>
+    <string name="sample_progressbar_text">Barra di progresso: Anteprima</string>
     <string name="progressbar_interpolator">Animazione</string>
     <string name="progressbar_none">Nessuna</string>
     <string name="progressbar_acclerate">Accelera</string>
@@ -291,7 +290,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Color picker -->
     <string name="dialog_color_picker">Selezione colore</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="press_color_to_apply">Premi su un colore in basso per applicare</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
@@ -411,14 +410,14 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!--Notification peek-->
     <string name="notification_peek_title">Notifiche peek</string>
-    <string name="notification_peek_summary">Show latest notification after picking up your device</string>
-    <string name="peek_pickup_timeout_title">Peek pickup timeout</string>
+    <string name="notification_peek_summary">Mostra le ultime notifiche prendendo in mano il dispositivo</string>
+    <string name="peek_pickup_timeout_title">Timeout rilevazione movimento</string>
     <string name="peek_pickup_10seconds">10 secondi (predefinito)</string>
     <string name="peek_pickup_30seconds">30 secondi</string>
     <string name="peek_pickup_45seconds">45 secondi</string>
     <string name="peek_pickup_60seconds">1 minuto</string>
     <string name="peek_pickup_120seconds">2 minuti</string>
-    <string name="peek_wake_timeout_title">Peek wake timeout</string>
+    <string name="peek_wake_timeout_title">Timeout mostra notifiche</string>
     <string name="peek_wake_3seconds">3 secondi</string>
     <string name="peek_wake_5seconds">5 secondi (predefinito)</string>
     <string name="peek_wake_10seconds">10 secondi</string>
@@ -427,9 +426,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!--Blacklist-->
     <string name="blacklist_button_title">Blacklist</string>
-    <string name="peek_blacklist_label">Blacklist in Peek</string>
-    <string name="floating_blacklist_label">Blacklist in Floating Mode</string>
-    <string name="hover_blacklist_label">Blacklist in Hover</string>
+    <string name="peek_blacklist_label">Blacklist di Peek</string>
+    <string name="floating_blacklist_label">Blacklist della Modalità Fluttuante</string>
+    <string name="hover_blacklist_label">Blacklist di Hover</string>
 
     <!-- Whether to display the IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
@@ -472,30 +471,30 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="six">Sei</string>
 
     <!-- Quiet hours -->
-    <string name="quiet_hours_title">Quiet hours</string>
-    <string name="quiet_hours_summary">Configure the hours the device should be quiet</string>
-    <string name="quiet_hours_note_title">Note</string>
+    <string name="quiet_hours_title">Periodo di quiete</string>
+    <string name="quiet_hours_summary">Configura gli orari in cui il dispositivo dovrebbe essere silenzioso</string>
+    <string name="quiet_hours_note_title">Nota</string>
     <string name="quiet_hours_note_summary">Incoming calls will behave like usual during quiet hours</string>
-    <string name="quiet_hours_enabled">Enable quiet hours</string>
+    <string name="quiet_hours_enabled">Attiva il periodo di quiete</string>
     <string name="quiet_hours_enabled_on">Quiet hours will be enforced</string>
     <string name="quiet_hours_enabled_off">Notifications will function as normal</string>
-    <string name="quiet_hours_start">Start of quiet hours</string>
+    <string name="quiet_hours_start">Avvia il periodo di quiete</string>
  <string name="quiet_hours_auto_title">Follow ringer mode</string>
     <string name="quiet_hours_auto_silent">Quiet hours will enable when ringer is set to silent</string>
     <string name="quiet_hours_auto_vibrate">Quiet hours will enable when ringer is set to vibrate or silent</string>
     <string name="quiet_hours_start_summary">When to start enforcing quiet hours</string>
-    <string name="quiet_hours_end">End of quiet hours</string>
+    <string name="quiet_hours_end">Termina il periodo di quiete</string>
     <string name="quiet_hours_end_summary">When to stop enforcing quiet hours</string>
-    <string name="quiet_hours_ringer_title">Mute phone ringer</string>
+    <string name="quiet_hours_ringer_title">Silenzia suoneria telefono</string>
     <string name="quiet_hours_ringer_on">No ringer will be played</string>
     <string name="quiet_hours_ringer_off">Ringer will play like normal</string>
-    <string name="quiet_hours_mute">Mute notifications</string>
+    <string name="quiet_hours_mute">Silenzia notifiche</string>
     <string name="quiet_hours_mute_on">No sounds will be played</string>
     <string name="quiet_hours_mute_off">Sounds will play like normal</string>
-    <string name="quiet_hours_still">Disable vibrations</string>
+    <string name="quiet_hours_still">Disattiva vibrazioni</string>
     <string name="quiet_hours_still_on">Device will not vibrate</string>
     <string name="quiet_hours_still_off">Device will vibrate normally</string>
-    <string name="quiet_hours_dim">Disable notification light</string>
+    <string name="quiet_hours_dim">Disattiva la luce di notifica</string>
     <string name="quiet_hours_dim_on">Notification light will be disabled</string>
     <string name="quiet_hours_dim_off">Notification light will function as normal</string>
     <string name="quiet_hours_haptic">Disable haptic feedback</string>
@@ -504,18 +503,18 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
     <string name="quiet_hours_auto_sms_group">Automatic response</string>
-    <string name="quiet_hours_auto_sms_title">Incoming text messages</string>
-    <string name="quiet_hours_auto_sms_call_title">Incoming phone calls</string>
+    <string name="quiet_hours_auto_sms_title">Messaggi in entrata</string>
+    <string name="quiet_hours_auto_sms_call_title">Chiamate in entrata</string>
     <string name="quiet_hours_auto_string_title">Response to send</string>
     <string name="quiet_hours_auto_string_explain">This message will be sent to anyone who contacts you while
             quiet hours are active</string>
-    <string name="quiet_hours_auto_sms_null">[Automated Message] I\'ll get back to you when I can.</string>
-    <string name="quiet_hours_auto_disabled">Disabled</string>
-    <string name="quiet_hours_auto_enabled">All numbers</string>
-    <string name="quiet_hours_auto_contacts">Contacts only</string>
+    <string name="quiet_hours_auto_sms_null">[Messaggio Automatico] Ti richiamo più tardi.</string>
+    <string name="quiet_hours_auto_disabled">Disabilitato</string>
+    <string name="quiet_hours_auto_enabled">Tutti i numeri</string>
+    <string name="quiet_hours_auto_contacts">Solo contatti</string>
     <string name="quiet_hours_auto_starred">Starred contacts only</string>
     <string name="quiet_hours_bypass_group">Bypass quiet hours</string>
-    <string name="quiet_hours_sms_code_null">[Alarm]</string>
+    <string name="quiet_hours_sms_code_null">[Allarme]</string>
     <string name="quiet_hours_sms_bypass_title">Text message bypass</string>
     <string name="quiet_hours_sms_code_title">Text message key</string>
     <string name="quiet_hours_sms_code_explain">If an incoming message contains this text your phone will
@@ -528,22 +527,22 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="quiet_hours_bypass_ringtone_loop_summary_on">Ringtone will loop until dismissed</string>
     <string name="quiet_hours_bypass_ringtone_loop_summary_off">Ringtone will play only once</string>
     <string name="quiet_hours_alarm_dismiss">Dismiss Alarm</string>
-    <string name="quiet_hours_alarm_and">" and "</string>
+    <string name="quiet_hours_alarm_and">" e "</string>
     <string name="quiet_hours_alarm_dialog_title">QUIETHOURS BYPASSED</string>
     <string name="quiet_hours_alarm_message">" met the requirements to bypass Quiet Hours!"</string>
 
     <!-- Time range preference -->
-    <string name="start_time_title">Start</string>
-    <string name="end_time_title">End</string>
+    <string name="start_time_title">Inizio</string>
+    <string name="end_time_title">Fine</string>
 
     <!-- Hover settings -->
     <string name="hover_settings_title">Hover</string>
-    <string name="hover_require_fullscreen_mode_title">Require Fullscreen-Mode</string>
-    <string name="hover_require_fullscreen_mode_summary">Only show up when status bar is hidden</string>
-    <string name="hover_exclude_low_priority_title">Exclude low priority</string>
-    <string name="hover_exclude_low_priority_summary">Exclude notifications marked as low priority</string>
-    <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
-    <string name="hover_exclude_non_clearable_summary">Exclude not dismissable notifications</string>
+    <string name="hover_require_fullscreen_mode_title">Richiesta modalità immersiva</string>
+    <string name="hover_require_fullscreen_mode_summary">Si attiva solo con barra di stato nascosta</string>
+    <string name="hover_exclude_low_priority_title">Escludi bassa priorità</string>
+    <string name="hover_exclude_low_priority_summary">Escludi notifiche contrassegnate con bassa priorità</string>
+    <string name="hover_exclude_non_clearable_title">Escludi non removibili</string>
+    <string name="hover_exclude_non_clearable_summary">Escludi notifiche che non possono essere rimosse</string>
 
     <!-- Hover long fade out delay -->
     <string name="hover_long_fadeout_title">Timeout Hover</string>
@@ -554,15 +553,15 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_long_fadeout_15seconds">15 secondi</string>
 
     <!-- Hover exclude topmost app -->
-    <string name="hover_exclude_topmost_title">Exclude topmost app</string>
-    <string name="hover_exclude_topmost_summary">Exclude notifications from the app running in foreground</string>
+    <string name="hover_exclude_topmost_title">Escludi app superiore</string>
+    <string name="hover_exclude_topmost_summary">Escludi notifiche dall'app in esecuzione in primo piano</string>
 
     <!--  Plug-in prompt -->
-    <string name="plug_in_prompt_settings_title">Plug-in prompt</string>
+    <string name="plug_in_prompt_settings_title">Collegamento alimentatore</string>
 
     <!-- Turn on display when power connected; turn off display when power disconnected -->
-    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
-    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when plugged/unplugged</string>
+    <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Accendi lo schermo quando si collega o si scollega l\'alimentazione</string>
 
     <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
     <string name="power_notifications_enable_title">Enable sound/vibration</string>
